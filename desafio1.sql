@@ -124,9 +124,9 @@ INSERT INTO SpotifyClone.music(`name`, `lenght`, `album_id`)
 -- -----------------------------------------------------
 
 CREATE TABLE `following_artists`(
-    `foll_artists_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `user_id` INT NOT NULL,
     `artist_id` INT NOT NULL,
+    PRIMARY KEY (`user_id`, `artist_id`),
     FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
     FOREIGN KEY (`artist_id`) REFERENCES artist(`artist_id`)
 ) engine=InnoDB;
@@ -153,13 +153,12 @@ INSERT INTO SpotifyClone.following_artists(`user_id`, `artist_id`)
 -- Table SpotifyClone.reproduction_history
 -- -----------------------------------------------------
 CREATE TABLE `reproduction_history`(
-
-    `rep_history_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `user_id` INT NOT NULL,
     `music_id` INT NOT NULL,
     `reproduction_date` DATETIME NOT NULL,
-	   FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
-     FOREIGN KEY (`music_id`) REFERENCES music(`music_id`)
+    PRIMARY KEY (`user_id`, `music_id`),
+	FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
+    FOREIGN KEY (`music_id`) REFERENCES music(`music_id`)
 ) engine=InnoDB;
 
 INSERT INTO SpotifyClone.reproduction_history(`user_id`, `music_id`, `reproduction_date`)
