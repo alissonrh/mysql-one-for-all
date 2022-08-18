@@ -1,6 +1,6 @@
 # Projero MySQL One-For-All
 
-Neste projeto, foi recebido uma tabela com dados de clone simplificado do banco de dados da Spotify. Porém ela não estava normalizada, sendo o principal desafio normalizar a estrutura que foi passada. Isso é importante visto que o processo de normalização é algo que ajuda a dar mais credibilidade a um profissional que atua com estruturas de banco de dados diariamente. Estruturas normalizadas reduzem erros, diminuem a redundância e nos permitem garantir maior integridade de dados.
+Neste projeto, foi recebido uma tabela com dados simplificados de um clone do banco de dados do Spotify. Porém ela não estava normalizada, sendo o principal desafio normalizar a estrutura que foi passada. Isso é importante visto que o processo de normalização é algo que ajuda a dar mais credibilidade a um profissional que atua com estruturas de banco de dados diariamente. Estruturas normalizadas reduzem erros, diminuem a redundância e nos permitem garantir maior integridade de dados.
 
 O que foi avaliado:
 
